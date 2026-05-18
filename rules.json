@@ -172,5 +172,17 @@
     "id_regex": "(https:\\/\\/www\\.championat\\.com\\/[^#]+)",
     "ls": [ "{{ID}}#stats" ],
     "ln": [ "{{ID}}#stats" ]
+  },
+  "www.ushl.com": {
+    "_comment": "HOKEJ - USA - USHL (United States Hockey League)",
+    "type": "template",
+    "id_regex": "game-center\\/(\\d+)",
+    "ls": [
+      "https://lscluster.hockeytech.com/game_reports/official-game-report.php?lang_id=1&client_code=ushl&game_id={{ID}}",
+      "{{ORIGINAL}}"
+    ],
+    "ln": [
+      "{{ORIGINAL}}"
+    ]
   }
 }
