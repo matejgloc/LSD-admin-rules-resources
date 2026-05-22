@@ -149,7 +149,7 @@
     ]
   },
   "opta-data.lsoffice.cz": {
-    "_comment": "FOTBAL - Opta (varianta opta-data)",
+    "_comment": "FOTBAL - Opta (varianta opta-data) - GITID: 1",
     "type": "template",
     "id_regex": "optaID=([^&]+)",
     "ls": [
@@ -160,7 +160,7 @@
     ]
   },
   "opta.lsoffice.cz": {
-    "_comment": "FOTBAL - Opta (varianta opta)",
+    "_comment": "FOTBAL - Opta (varianta opta) - GITID: 1",
     "type": "template",
     "id_regex": "optaID=([^&]+)",
     "ls": [ "{{ORIGINAL}}" ],
