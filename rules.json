@@ -1,4 +1,5 @@
 {
+  "_version": "1.5",
   "www.bundesliga.com": {
     "_comment": "FOTBAL - Německá Bundesliga",
     "ls": "/liveticker",
@@ -149,7 +150,7 @@
     ]
   },
   "opta-data.lsoffice.cz": {
-    "_comment": "FOTBAL - Opta (varianta opta-data) - GITID: 1",
+    "_comment": "FOTBAL - Opta (varianta opta-data)",
     "type": "template",
     "id_regex": "optaID=([^&]+)",
     "ls": [
@@ -160,7 +161,7 @@
     ]
   },
   "opta.lsoffice.cz": {
-    "_comment": "FOTBAL - Opta (varianta opta) - GITID: 1",
+    "_comment": "FOTBAL - Opta (varianta opta)",
     "type": "template",
     "id_regex": "optaID=([^&]+)",
     "ls": [ "{{ORIGINAL}}" ],
