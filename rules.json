@@ -189,12 +189,12 @@
   "www.mlb.com": {
     "_comment": "BASEBALL - USA - MLB (Gameday summary)",
     "type": "template",
-    "id_regex": "(https:\\/\\/www\\.mlb\\.com\\/gameday\\/[^\\/]+\\/\\d{4}\\/\\d{2}\\/\\d{2}\\/)(\\d+)",
+    "id_regex": "(https:\\/\\/www\\.mlb\\.com\\/gameday\\/[^\\/]+\\/\\d{4}\\/\\d{2}\\/\\d{2}\\/\\d+)",
     "ls": [
-      "{{ID1}}{{ID2}}/summary"
+      "{{ID}}/summary"
     ],
     "ln": [
-      "{{ID1}}{{ID2}}/summary"
+      "{{ID}}/summary"
     ]
   }
 }
