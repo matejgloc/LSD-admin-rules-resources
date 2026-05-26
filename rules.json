@@ -185,5 +185,10 @@
     "ln": [
       "{{ORIGINAL}}"
     ]
+  },
+  "https://www.mlb.com/": {
+    "_comment": "JINÉ - USA - MLB | ID: 3",
+    "ls": "/summary",
+    "ln": "/summary"
   }
 }
