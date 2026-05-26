@@ -6,7 +6,7 @@
     "ln": "/lineup"
   },
   "theahl.com": {
-    "_comment": "HOKEJ - AHL (USA/Canada)",
+    "_comment": "HOKEJ - AHL (USA/Canada) | ID: 3",
     "type": "template",
     "id_regex": "game-center\\/(\\d+)",
     "ls": [
@@ -18,7 +18,7 @@
     ]
   },
   "nhl.com": {
-    "_comment": "HOKEJ - NHL (Základní i reporty s detekcí sezóny)",
+    "_comment": "HOKEJ - NHL | ID: 4",
     "type": "template",
     "id_regex": "gamecenter\\/.*\\/(\\d{4})\\/\\d{2}\\/\\d{2}\\/(\\d+)",
     "ls": [
@@ -30,7 +30,7 @@
     "ln": []
   },
   "www.thesphl.com": {
-    "_comment": "HOKEJ - SPHL (Southern Professional Hockey League)",
+    "_comment": "HOKEJ - SPHL (Southern Professional Hockey League) | ID: 5",
     "type": "template",
     "id_regex": "game-center\\/(\\d+)",
     "ls": [
@@ -42,7 +42,7 @@
     ]
   },
   "lscluster.hockeytech.com": {
-    "_comment": "HOKEJ - ECHL (East Coast Hockey League)",
+    "_comment": "HOKEJ - ECHL (East Coast Hockey League) | ID: 6",
     "type": "template",
     "id_regex": "game-center\\/(\\d+)",
     "ls": [
@@ -54,7 +54,7 @@
     ]
   },
   "www.del-2.org": {
-    "_comment": "HOKEJ - Německá DEL-2",
+    "_comment": "HOKEJ - Německá DEL-2 | ID: 7",
     "type": "template",
     "id_regex": "spiel\\/.*_(\\d+)",
     "ls": [
@@ -66,7 +66,7 @@
     ]
   },
   "www.eliteleague.co.uk": {
-    "_comment": "HOKEJ - UK Elite League (vysávání Gamesheetu)",
+    "_comment": "HOKEJ - UK Elite League | ID: 8",
     "type": "template",
     "id_regex": "game\\/(\\d+)",
     "fetch_gamesheet": true,
@@ -79,7 +79,7 @@
     ]
   },
   "www.thepwhl.com": {
-    "_comment": "HOKEJ - USA - PWHL (Ženská profi liga)",
+    "_comment": "HOKEJ - USA - PWHL | ID: 9",
     "type": "template",
     "id_regex": "game-center\\/(\\d+)",
     "ls": [
@@ -91,7 +91,7 @@
     ]
   },
   "metalligaen.dk": {
-    "_comment": "HOKEJ - Dánsko - Metal Ligaen",
+    "_comment": "HOKEJ - Dánsko - Metal Ligaen | ID: 10",
     "type": "template",
     "id_regex": "gameId=(\\d+)",
     "ls": [
@@ -104,7 +104,7 @@
     ]
   },
   "zapasy.ceskyhokej.cz": {
-    "_comment": "HOKEJ - ČR - Extraliga (Pouze spolehlivé zápisy)",
+    "_comment": "HOKEJ - ČR - Extraliga | ID: 11",
     "type": "template",
     "id_regex": "detail\\/(\\d+)",
     "ls": [
@@ -115,7 +115,7 @@
     ]
   },
   "liiga.fi": {
-    "_comment": "HOKEJ - Finsko - Liiga",
+    "_comment": "HOKEJ - Finsko - Liiga | ID: 12",
     "type": "template",
     "id_regex": "game\\/(\\d+)\\/(\\d+)",
     "ls": [
@@ -126,7 +126,7 @@
     ]
   },
   "en.khl.ru": {
-    "_comment": "HOKEJ - Rusko - KHL",
+    "_comment": "HOKEJ - Rusko - KHL | ID: 13",
     "type": "template",
     "id_regex": "game\\/(\\d+)\\/(\\d+)",
     "ls": [
@@ -139,7 +139,7 @@
     ]
   },
   "www.hockeyslovakia.sk": {
-    "_comment": "HOKEJ - Slovensko - Tipsport Liga",
+    "_comment": "HOKEJ - Slovensko - Tipsport Liga | ID: 14",
     "type": "template",
     "id_regex": "(https:\\/\\/www\\.hockeyslovakia\\.sk\\/sk\\/stats\\/matches\\/\\d+\\/[^\\/]+\\/match\\/\\d+)\\/",
     "ls": [
@@ -150,7 +150,7 @@
     ]
   },
   "opta-data.lsoffice.cz": {
-    "_comment": "FOTBAL - Opta (varianta opta-data)",
+    "_comment": "FOTBAL - Opta (varianta opta-data)  | ID: 1",
     "type": "template",
     "id_regex": "optaID=([^&]+)",
     "ls": [
@@ -161,21 +161,21 @@
     ]
   },
   "opta.lsoffice.cz": {
-    "_comment": "FOTBAL - Opta (varianta opta)",
+    "_comment": "FOTBAL - Opta (varianta opta) | ID: 1",
     "type": "template",
     "id_regex": "optaID=([^&]+)",
     "ls": [ "{{ORIGINAL}}" ],
     "ln": [ "{{ORIGINAL}}" ]
   },
   "www.championat.com": {
-    "_comment": "FOTBAL - Rusko - Youth League",
+    "_comment": "FOTBAL - Rusko - Youth League | ID: 15",
     "type": "template",
     "id_regex": "(https:\\/\\/www\\.championat\\.com\\/[^#]+)",
     "ls": [ "{{ID}}#stats" ],
     "ln": [ "{{ID}}#stats" ]
   },
   "www.ushl.com": {
-    "_comment": "HOKEJ - USA - USHL (United States Hockey League)",
+    "_comment": "HOKEJ - USA - USHL (United States Hockey League) | ID: 16",
     "type": "template",
     "id_regex": "game-center\\/(\\d+)",
     "ls": [
@@ -187,7 +187,7 @@
     ]
   },
   "www.mlb.com": {
-    "_comment": "BASEBALL - USA - MLB (Gameday summary)",
+    "_comment": "BASEBALL - USA - MLB | ID: 17",
     "type": "template",
     "id_regex": "(https:\\/\\/www\\.mlb\\.com\\/gameday\\/[^\\/]+\\/\\d{4}\\/\\d{2}\\/\\d{2}\\/\\d+)",
     "ls": [
