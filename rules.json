@@ -2,8 +2,8 @@
   "_version": "1.1",
   "www.bundesliga.com": {
     "_comment": "FOTBAL - Německo - Bundesliga | ID: 2",
-    "ls": "{{ORIGINAL}} + /liveticker",
-    "ln": "{{ORIGINAL}} + /lineup"
+    "ls": "{{ORIGINAL}}/liveticker",
+    "ln": "{{ORIGINAL}}/lineup"
   },
   "theahl.com": {
     "_comment": "HOKEJ - AHL (USA/Canada) | ID: 3",
