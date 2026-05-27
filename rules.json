@@ -1,290 +1,200 @@
 {
   "_version": "1.1",
-
   "www.bundesliga.com": {
     "_comment": "FOTBAL - Německo - Bundesliga | ID: 2",
-    "type": "append",
-    "normalize_url": true,
-    "remove_query": true,
-    "remove_hash": true,
-    "trim_trailing_slash": true,
     "ls": "/liveticker",
     "ln": "/lineup"
   },
-
   "theahl.com": {
     "_comment": "HOKEJ - AHL (USA/Canada) | ID: 3",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "\\/game-center\\/(\\d+)(?:\\/|$|\\?)",
+    "id_regex": "game-center\\/(\\d+)",
     "ls": [
       "https://lscluster.hockeytech.com/game_reports/official-game-report.php?lang_id=1&client_code=ahl&game_id={{ID}}",
-      "{{ORIGINAL_CLEAN}}"
+      "{{ORIGINAL}}"
     ],
     "ln": [
-      "{{ORIGINAL_CLEAN}}"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+      "{{ORIGINAL}}"
+    ]
   },
-
   "nhl.com": {
     "_comment": "HOKEJ - NHL | ID: 4",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "\\/gamecenter\\/.*?\\/(\\d{4})\\/\\d{2}\\/\\d{2}\\/(\\d+)(?:\\/|$|\\?)",
+    "id_regex": "gamecenter\\/.*\\/(\\d{4})\\/\\d{2}\\/\\d{2}\\/(\\d+)",
     "ls": [
-      {
-        "name": "Gamecenter",
-        "url": "{{ORIGINAL_CLEAN}}"
-      },
-      {
-        "name": "GS",
-        "url": "https://www.nhl.com/scores/htmlreports/{{ID1}}{{ID1_PLUS_1}}/GS{{ID2_SHORT}}.HTM"
-      },
-      {
-        "name": "ES",
-        "url": "https://www.nhl.com/scores/htmlreports/{{ID1}}{{ID1_PLUS_1}}/ES{{ID2_SHORT}}.HTM"
-      },
-      {
-        "name": "RR",
-        "url": "https://www.nhl.com/scores/htmlreports/{{ID1}}{{ID1_PLUS_1}}/RO{{ID2_SHORT}}.HTM"
-      }
+      { "name": "Gamecenter", "url": "{{ORIGINAL}}" },
+      { "name": "GS", "url": "https://www.nhl.com/scores/htmlreports/{{ID1}}{{ID1_PLUS_1}}/GS{{ID2_SHORT}}.HTM" },
+      { "name": "ES", "url": "https://www.nhl.com/scores/htmlreports/{{ID1}}{{ID1_PLUS_1}}/ES{{ID2_SHORT}}.HTM" },
+      { "name": "RR", "url": "https://www.nhl.com/scores/htmlreports/{{ID1}}{{ID1_PLUS_1}}/RO{{ID2_SHORT}}.HTM" }
     ],
-    "ln": [],
-    "fallback": "{{ORIGINAL_CLEAN}}",
-    "validate_year_range": {
-      "min": 2000,
-      "max": 2100
-    }
+    "ln": []
   },
-
   "www.thesphl.com": {
     "_comment": "HOKEJ - SPHL (Southern Professional Hockey League) | ID: 5",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "\\/game-center\\/(\\d+)(?:\\/|$|\\?)",
+    "id_regex": "game-center\\/(\\d+)",
     "ls": [
       "https://lscluster.hockeytech.com/game_reports/official-game-report.php?lang_id=1&client_code=sphl&game_id={{ID}}",
-      "{{ORIGINAL_CLEAN}}"
+      "{{ORIGINAL}}"
     ],
     "ln": [
-      "{{ORIGINAL_CLEAN}}"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+      "{{ORIGINAL}}"
+    ]
   },
-
   "lscluster.hockeytech.com": {
     "_comment": "HOKEJ - ECHL (East Coast Hockey League) | ID: 6",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "\\/game-center\\/(\\d+)(?:\\/|$|\\?)",
+    "id_regex": "game-center\\/(\\d+)",
     "ls": [
       "https://lscluster.hockeytech.com/game_reports/official-game-report.php?client_code=echl&game_id={{ID}}&lang_id=1",
-      "{{ORIGINAL_CLEAN}}"
+      "{{ORIGINAL}}"
     ],
     "ln": [
-      "{{ORIGINAL_CLEAN}}"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+      "{{ORIGINAL}}"
+    ]
   },
-
   "www.del-2.org": {
     "_comment": "HOKEJ - Německá DEL-2 | ID: 7",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "\\/spiel\\/.*?_(\\d+)(?:\\/|$|\\?)",
+    "id_regex": "spiel\\/.*_(\\d+)",
     "ls": [
-      "{{ORIGINAL_CLEAN}}",
-      "{{ORIGINAL_CLEAN}}/timeline"
+      "{{ORIGINAL}}",
+      "{{ORIGINAL}}/timeline"
     ],
     "ln": [
-      "{{ORIGINAL_CLEAN}}/lineup"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+      "{{ORIGINAL}}/lineup"
+    ]
   },
-
   "www.eliteleague.co.uk": {
     "_comment": "HOKEJ - UK Elite League | ID: 8",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "\\/game\\/(\\d+)(?:\\/|$|\\?)",
+    "id_regex": "game\\/(\\d+)",
     "fetch_gamesheet": true,
-    "fetch_timeout_ms": 5000,
-    "fetch_retry_count": 2,
     "ls": [
-      "{{ORIGINAL_CLEAN}}",
+      "{{ORIGINAL}}",
       "{{GAMESHEET}}"
     ],
     "ln": [
       "{{GAMESHEET}}"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+    ]
   },
-
   "www.thepwhl.com": {
     "_comment": "HOKEJ - USA - PWHL | ID: 9",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "\\/game-center\\/(\\d+)(?:\\/|$|\\?)",
+    "id_regex": "game-center\\/(\\d+)",
     "ls": [
       "https://lscluster.hockeytech.com/game_reports/official-game-report.php?lang_id=1&client_code=pwhl&game_id={{ID}}",
-      "{{ORIGINAL_CLEAN}}"
+      "{{ORIGINAL}}"
     ],
     "ln": [
-      "{{ORIGINAL_CLEAN}}"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+      "{{ORIGINAL}}"
+    ]
   },
-
   "metalligaen.dk": {
     "_comment": "HOKEJ - Dánsko - Metal Ligaen | ID: 10",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "[\\?&]gameId=(\\d+)",
+    "id_regex": "gameId=(\\d+)",
     "ls": [
-      "{{ORIGINAL_CLEAN}}",
+      "{{ORIGINAL}}",
       "https://den.hokejovyzapis.cz/pdf/print/de-html/{{ID}}"
     ],
     "ln": [
-      "{{ORIGINAL_CLEAN}}",
+      "{{ORIGINAL}}",
       "https://den.hokejovyzapis.cz/pdf/print/de-html/{{ID}}"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+    ]
   },
-
   "zapasy.ceskyhokej.cz": {
     "_comment": "HOKEJ - ČR - Extraliga | ID: 11",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "\\/detail\\/(\\d+)(?:\\/|$|\\?)",
+    "id_regex": "detail\\/(\\d+)",
     "ls": [
       "https://hokejovyzapis.cz/pdf/print/cs-html/{{ID}}"
     ],
     "ln": [
       "https://hokejovyzapis.cz/pdf/print/cs/{{ID}}"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+    ]
   },
-
   "liiga.fi": {
     "_comment": "HOKEJ - Finsko - Liiga | ID: 12",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "\\/game\\/(\\d+)\\/(\\d+)(?:\\/|$|\\?)",
+    "id_regex": "game\\/(\\d+)\\/(\\d+)",
     "ls": [
       "https://liiga.fi/en/game/{{ID1}}/{{ID2}}/events"
     ],
     "ln": [
       "https://liiga.fi/en/game/{{ID1}}/{{ID2}}/lineups"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+    ]
   },
-
   "en.khl.ru": {
     "_comment": "HOKEJ - Rusko - KHL | ID: 13",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "\\/game\\/(\\d+)\\/(\\d+)(?:\\/|$|\\?)",
+    "id_regex": "game\\/(\\d+)\\/(\\d+)",
     "ls": [
       "https://text.khl.ru/en/{{ID2}}.html",
-      {
-        "name": "Auto PCH",
-        "url": "https://en.khl.ru/game/{{ID1}}/{{ID2}}/protocol/"
-      }
+      { "name": "Auto PCH", "url": "https://en.khl.ru/game/{{ID1}}/{{ID2}}/protocol/" }
     ],
     "ln": [
       "https://en.khl.ru/pdf/{{ID1}}/{{ID2}}/game-{{ID2}}-start-en.pdf",
       "https://text.khl.ru/en/{{ID2}}.html"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+    ]
   },
-
   "www.hockeyslovakia.sk": {
     "_comment": "HOKEJ - Slovensko - Tipsport Liga | ID: 14",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "(https:\\/\\/www\\.hockeyslovakia\\.sk\\/sk\\/stats\\/matches\\/\\d+\\/[^\\/]+\\/match\\/\\d+)",
+    "id_regex": "(https:\\/\\/www\\.hockeyslovakia\\.sk\\/sk\\/stats\\/matches\\/\\d+\\/[^\\/]+\\/match\\/\\d+)\\/",
     "ls": [
       "{{ID}}/Overview#matchDetailTabs"
     ],
     "ln": [
       "{{ID}}/Lineup"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+    ]
   },
-
   "opta-data.lsoffice.cz": {
-    "_comment": "FOTBAL - Opta (varianta opta-data) | ID: 1",
+    "_comment": "FOTBAL - Opta (varianta opta-data)  | ID: 1",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "[\\?&]optaID=([^&#]+)",
+    "id_regex": "optaID=([^&]+)",
     "ls": [
       "https://opta.lsoffice.cz/opta/opta-match-detail.php?optaID={{ID}}"
     ],
     "ln": [
       "https://opta.lsoffice.cz/opta/opta-match-detail.php?optaID={{ID}}"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+    ]
   },
-
   "opta.lsoffice.cz": {
     "_comment": "FOTBAL - Opta (varianta opta) | ID: 1",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "[\\?&]optaID=([^&#]+)",
-    "ls": [
-      "{{ORIGINAL_CLEAN}}"
-    ],
-    "ln": [
-      "{{ORIGINAL_CLEAN}}"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+    "id_regex": "optaID=([^&]+)",
+    "ls": [ "{{ORIGINAL}}" ],
+    "ln": [ "{{ORIGINAL}}" ]
   },
-
   "www.championat.com": {
     "_comment": "FOTBAL - Rusko - Youth League | ID: 15",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "(https:\\/\\/www\\.championat\\.com\\/[^#?]+)",
-    "ls": [
-      "{{ID}}#stats"
-    ],
-    "ln": [
-      "{{ID}}#stats"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+    "id_regex": "(https:\\/\\/www\\.championat\\.com\\/[^#]+)",
+    "ls": [ "{{ID}}#stats" ],
+    "ln": [ "{{ID}}#stats" ]
   },
-
   "www.ushl.com": {
     "_comment": "HOKEJ - USA - USHL (United States Hockey League) | ID: 16",
     "type": "template",
-    "normalize_url": true,
-    "id_regex": "\\/game-center\\/(\\d+)(?:\\/|$|\\?)",
+    "id_regex": "game-center\\/(\\d+)",
     "ls": [
       "https://lscluster.hockeytech.com/game_reports/official-game-report.php?lang_id=1&client_code=ushl&game_id={{ID}}",
-      "{{ORIGINAL_CLEAN}}"
+      "{{ORIGINAL}}"
     ],
     "ln": [
-      "{{ORIGINAL_CLEAN}}"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}"
+      "{{ORIGINAL}}"
+    ]
   },
-
   "www.mlb.com": {
     "_comment": "BASEBALL - USA - MLB | ID: 17",
     "type": "template",
-    "normalize_url": true,
-    "remove_query": true,
-    "remove_hash": true,
-    "trim_trailing_slash": true,
-    "id_regex": "(https:\\/\\/www\\.mlb\\.com\\/gameday\\/.*?\\/\\d+)",
+    "id_regex": "(https:\\/\\/www\\.mlb\\.com\\/gameday\\/[^\\/]+\\/\\d{4}\\/\\d{2}\\/\\d{2}\\/\\d+)",
     "ls": [
       "{{ID}}/summary"
     ],
     "ln": [
       "{{ID}}/summary"
-    ],
-    "fallback": "{{ORIGINAL_CLEAN}}",
-    "accept_future_seasons": true
+    ]
   }
 }
